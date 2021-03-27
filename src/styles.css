@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+a{
+  color: black;
+}
+a:hover, a:active{
+  background-color: gray;
+  color: white;
+}
+li{
+  border: 1px solid black;
+}
+.form{
+  margin-top: 3rem;
+  border:1px solid black;
+}
+.btn{
+  float: right;
+  padding: .5rem 3rem;
+}
+.row{
+  margin: 2rem 0;
+}
+.nav-pills .nav-link {
+	border-radius: 0;
+}
+.table{
+  background-color: white;
+}
+.jumbotron{
+  margin-top: 3rem;
+  padding: 1rem .5rem 2rem .5rem;
+}
+.bottom{
+  margin-bottom: 3rem;
+}
+.TotalPrice{
+  float: right;
+}
+.checkbox{
+  padding-left: 3rem;
+}
+label{
+  margin-left: 5px;
+}

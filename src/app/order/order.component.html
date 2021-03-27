@@ -1,0 +1,76 @@
+<div class="container form">
+
+    <div class="row">
+      <div class="col-1">
+        <label >Category</label>
+      </div>
+      <div class="col-4">
+          <select name="category" [(ngModel)]="selectedCategory" (change) = "selectCat()" class="form-control">
+            <option value="cat1">Cat1</option>
+            <option value="cat2">Cat2</option>
+            <option value="cat3">Cat3</option>
+          </select>
+         
+      </div>
+      <div class="col-6 checkbox">
+        <input type="checkbox" name="combo" id="combo" (click) = "isCombo()">
+        <label for="combo"> combo - add 2LE</label>
+        <br>
+        <input type="checkbox" name="spicy" id="spicy" (click) = "isSpicy()">
+        <label for="spicy"> spicy - add 1LE</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-1">
+        <label for="meal">Meal</label>
+      </div>
+      <div class="col-4">
+          <select class="form-control" name="meal" [(ngModel)]="price" >
+              <option *ngFor="let option of options" [value]="option.value" (click) ="selectedMale = option.name">{{option.name}}</option>
+          </select>       
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-1">
+        <label for="q">Q</label>
+      </div>
+      <div class="col-4">
+        <input class="form-control" type="number" name="quantity" [(ngModel)]="quantity">       
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-3"></div>
+      <div class="col-4 price">
+        <h3>Price {{price}} LE</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm">
+        <button class="btn btn-primary" (click)="addItem()">Add</button>
+      </div>
+    </div>
+
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Item</th>
+        <th scope="col">Q</th>
+        <th scope="col">Price</th>
+        <th scope="col">Addons</th>
+        <th scope="col">Total</th>
+      </tr>
+    </thead>
+    <tbody #rowContainer>
+    </tbody>
+  </table>
+  <h3 class = "TotalPrice"> Total: {{TotalPrice}} LE</h3>
+</div>
+<button class="btn btn-primary bottom"(click)="reset()">Add New Order</button>

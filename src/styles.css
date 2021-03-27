@@ -1,7 +1,7 @@
 a{
   color: black;
 }
-a:hover, a:active{
+a:hover, a:focus{
   background-color: gray;
   color: white;
 }
@@ -12,8 +12,8 @@ li{
   margin-top: 3rem;
   border:1px solid black;
 }
+
 .btn{
-  float: right;
   padding: .5rem 3rem;
 }
 .row{
@@ -40,4 +40,22 @@ li{
 }
 label{
   margin-left: 5px;
+}
+img{
+  width: 250px;
+  height: 250px;
+  border: 5px solid gray;
+  padding: 4rem;
+}
+.admin{
+  margin: 3rem 0;
+}
+form{
+  text-align: center;
+}
+.col-3, .col-6{
+  margin-left: 2rem;
+}
+#exampleFormControlFile1{
+  margin-top: 1rem;
 }
